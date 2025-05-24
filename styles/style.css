@@ -1,22 +1,23 @@
 .header {
-    width: 1100px;
-    height: 293px;
-    padding: 50px;
-    background-color: #fff;
     display: flex;
-    position: relative;
+    width: 1100px;
+    min-height: 293px;
+    height: auto;
+    padding: 92px 60px 92px 45px;
+    box-sizing: border-box;
+    gap: 33px;
+    align-items: center;
+    background-color: #fff;
     font-size: 18px;
     font-weight: 400;
 }
 
 .header_left {
     display: flex;
-    position: absolute;
-    top: 128px;
-    left: 45px;
+    justify-self: start;
     flex-direction: row;
     align-items: center;
-    gap: 28px;
+    margin-bottom: 5px;
 }
 
 .header_list {
@@ -24,7 +25,7 @@
     flex-direction: row;
     list-style: circle;
     text-underline-offset: 4px;
-    gap: 24px;
+    gap: 23px;
 }
 
 .list_item {
@@ -39,25 +40,20 @@
     list-style: none;
 }
 
-.header_center {
-    position: absolute;
-    left: 476px;
-    top: 92px;
-}
-
 .logo {
     width: 148px;
-    height: 105px;
+    max-height: 106px;
+    height: auto;
 }
 
-.header_right {
+.header_address {
     width: 230px;
-    height: 98px;
-    position: absolute;
-    top: 96px;
-    right: 60px;
+    justify-self: end;
+    margin-left: auto;
+    margin-bottom: 5px;
     font-size: 18px;
     font-weight: 400;
+    font-style: normal;
     line-height: 24.3px;
     text-underline-offset: 4px;
 }
@@ -80,20 +76,21 @@
     position: relative;
 }
 
-.top_background {
+.section_top_background {
     width: 100%;
     height: 100%;
     background-color: rgba(0 0 0 / 0.6);
     display: flex;
-    justify-content: center;
+    padding: 165px 50px 50px 50px;
 }
 
 .top_content {
-    width: 1000px;
-    height: 385px;
-    position: relative;
-    margin-top: 165px;
-    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 106px;
+}
+
+.top_span {
     color: #fff;
     font-weight: 700;
     font-size: 50px;
@@ -101,22 +98,16 @@
     text-transform: uppercase;
 }
 
-.top_content_left {
-    position: absolute;
-    left: 0px;
-    top: 0px;
+.top_span_left {
+
 }
 
-.top_content_center {
-    position: absolute;
-    left: 330px;
-    top: 134px;
+.top_span_center {
+
 }
 
-.top_content_right {
-    position: absolute;
-    right: -30px;
-    bottom: -1px;
+.top_span_right {
+
 }
 
 .top_content_footer {
