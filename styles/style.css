@@ -294,9 +294,11 @@
     line-height: 24.3px;
 }
 
-.a_footer {
+.a_adress {
     text-decoration: underline;
     text-underline-offset: 4px;
+    font-size: 18px;
+    line-height: 24.3px;
 }
 
 .footer_nav {
@@ -304,6 +306,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 3px;
+}
+
+.a_nav {
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    line-height: 100%;
+}
+.a_nav_none_underline {
+    text-decoration: none;
 }
 
 .footer_contacts {
