@@ -60,7 +60,6 @@
 
 .main {
     width: 1100px;
-    height: 2400px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -68,11 +67,10 @@
 
 .section-top {
     width: 1100px;
-    height: 757px;
+    min-height: 757px;
     background-image: url(../images/cover.jpg);
     background-size: cover;
     background-position: center;
-    display: flex;
     position: relative;
 }
 
@@ -80,35 +78,42 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0 0 0 / 0.6);
-    display: flex;
-    padding: 165px 50px 50px 50px;
+    padding: 165px 20px 50px 50px;
 }
 
 .top_content {
     display: flex;
     flex-direction: column;
-    margin-bottom: 106px;
+    gap: 16px;
 }
 
 .top_span {
     color: #fff;
     font-weight: 700;
-    font-size: 50px;
-    letter-spacing: 0.6em;
+    font-size: 100px;
+    letter-spacing: 0.3em;
     text-transform: uppercase;
 }
 
+.top_span_left {
+    text-align: left;
+}
+
+.top_span_center {
+    text-align: center;
+}
+
+.top_span_right {
+    text-align: right;
+}
+
 .top_content_footer {
-    width: 1000px;
-    height: 51px;
     display: flex;
+    margin: 107px 30px 0px 0px;
     flex-direction: row;
     justify-content: space-between;
     gap: 10px;
     align-items: center;
-    position: absolute;
-    left: 50px;
-    bottom: 49px;
 }
 
 .top_footer_text {
@@ -124,7 +129,7 @@
     width: 256px;
     height: 51px;
     background-color: rgba(0 0 0 / 0);
-    border: 1px solid #fff;
+    border: 1px solid currentColor;
     font-size: 22px;
     font-weight: 500;
     color: #fff;
@@ -132,89 +137,95 @@
     text-decoration: none;
 }
 
-.section-middle {
+.section-overlay {
     width: 1052px;
-    height: 723px;
     margin-top: 180px;
     padding: 0px;
     position: relative;
 }
 
-.h_middle {
+.h_overlay {
     font-size: 40px;
     font-weight: 700;
     color: #000;
     text-transform: uppercase;
     margin-left: 40px;
+    margin-bottom: 25px;
 }
 
-.block_middle_row {
-    width: 100%;
-    height: 596px;
+.lot-container {
     display: flex;
     gap: 25px;
-    justify-content: space-between;
-    margin-top: 27px;
+    width: 1052px;
+    margin: 0 0 30px 0;
 }
 
-.middle_block {
+.lot {
     width: 334px;
-    height: 100%;
+    min-height: 596px;
+    position: relative;
     background-size: cover;
     background-position: center;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    box-sizing: border-box;
 }
 
-.middle_block_first {
+.lot_left {
     background-image: url(../images/card-lot-01.jpg);
 }
 
-.middle_block_second {
+.lot_center {
     background-image: url(../images/card-lot-02.jpg);
 }
 
-.middle_block_third {
+.lot_right {
     background-image: url(../images/card-lot-03.jpg);
 }
 
-.middle_background {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0 0 0 / 0.6);
+.lot::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    justify-content: space-between;
+}
+
+.overlay {
+    position: relative;
+    z-index: 2;
+    padding: 48px 40px;
     display: flex;
-    padding: 48px 40px 48px 40px;
     flex-direction: column;
     justify-content: space-between;
-    gap: 5px;
 }
 
-.a_block_middle {
+.lot h3 {
     font-size: 22px;
     font-weight: 700;
-    color: #fff;
+    line-height: 1.2;
+    margin-bottom: 10px;
     text-transform: uppercase;
     text-decoration: underline;
-    line-height: 1.2em;
 }
 
-.p_block_middle {
+.lot p {
     font-size: 20px;
     font-weight: 400;
-    line-height: 1.2em;
-    color: #fff;
+    line-height: 1.2;
 }
 
-.a_middle {
+.a_overlay {
     font-size: 20px;
     font-weight: 400;
     text-underline-offset: 5px;
-    position: absolute;
-    left: 40px;
-    bottom: -1px;
+    margin-left: 40px;
 }
 
-.section-bottom {
+.section_bottom {
     width: 1052px;
-    height: 595px;
     margin-top: 120px;
     padding: 35px 0px 0px 47px;
     gap: 40px;
@@ -239,7 +250,6 @@
 
 .bottom_content {
     width: 688px;
-    height: 460px;
     right: 0px;
     bottom: 0px;
     margin-top: 99px;
@@ -266,21 +276,20 @@
 
 .footer {
     width: 1100px;
-    height: 180px;
     display: flex;
-    margin-top: 106px;
+    margin-top: 130px;
     padding: 50px;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.footer_left {
+.footer_adress {
     width: 240px;
-    height: 98px;
     display: flex;
     flex-direction: column;
     font-size: 18px;
     font-weight: 400;
+    font-style: normal;
     color: #000;
     line-height: 24.3px;
 }
@@ -290,19 +299,19 @@
     text-underline-offset: 4px;
 }
 
-.footer_center {
+.footer_nav {
     width: 163.89999389648438px;
-    height: 64px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.footer_right {
+.footer_contacts {
     width: 240px;
     height: 48px;
     display: flex;
     justify-content: space-between;
+    list-style-type: none;
 }
 
 .footer_logo {
